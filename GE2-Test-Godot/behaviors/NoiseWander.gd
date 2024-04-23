@@ -17,6 +17,8 @@ var world_target:Vector3
 
 # Instantiate
 var noise:FastNoiseLite = FastNoiseLite.new()
+var is_active = false  # Add this at the top
+
 
 func _ready():
 	boid = get_parent()
@@ -33,6 +35,8 @@ func _process(delta):
 		DebugDraw3D.draw_line(boid.global_transform.origin, cent, Color.HOT_PINK)
 		DebugDraw3D.draw_line(cent, world_target, Color.HOT_PINK)
 		DebugDraw3D.draw_position(Transform3D(Basis(), world_target), Color.HOT_PINK)
+	if !is_active:
+		return
 
 func calculate():		
 	var n  = noise.get_noise_1d(theta)

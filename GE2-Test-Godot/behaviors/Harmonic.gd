@@ -14,6 +14,13 @@ var target:Vector3
 var worldTarget:Vector3
 
 var theta
+var is_active = false  # Add this at the top
+
+func _process(delta):
+	if !is_active:
+		return
+
+
 	
 func _ready():
 	boid = get_parent()

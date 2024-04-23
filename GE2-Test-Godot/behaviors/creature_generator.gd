@@ -78,6 +78,11 @@ func create_creature():
 func remap(value, from_min, from_max, to_min, to_max):
 	return (value - from_min) / (from_max - from_min) * (to_max - to_min) + to_min
 	
+#func _input(event):
+	#if event is InputEventKey and event.pressed and event.keycode == KEY_P:
+		#toggle_pause()
+
+	
 
 
 
