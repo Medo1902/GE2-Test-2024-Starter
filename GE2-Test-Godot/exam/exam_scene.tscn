@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b26ra08yh7e5m"]
+[gd_scene load_steps=9 format=3 uid="uid://b26ra08yh7e5m"]
 
 [ext_resource type="Script" path="res://behaviors/root.gd" id="1_prfgg"]
 [ext_resource type="Script" path="res://behaviors/creature_generator.gd" id="2_tqbii"]
+[ext_resource type="PackedScene" uid="uid://c30v8oyiurjmd" path="res://behaviors/head.tscn" id="3_y2bqx"]
+[ext_resource type="PackedScene" uid="uid://bx7ylucg5usj8" path="res://behaviors/body.tscn" id="4_kj5mt"]
 [ext_resource type="Script" path="res://behaviors/FPController.gd" id="5_8r2ni"]
 [ext_resource type="Environment" uid="uid://b5dnnkkpxo3qc" path="res://behaviors/seek_environment..tres" id="6_qamsj"]
 [ext_resource type="PackedScene" uid="uid://dc24oh4o5erhi" path="res://behaviors/SceneSwitcher.tscn" id="7_ybx0x"]
@@ -13,9 +15,11 @@ script = ExtResource("1_prfgg")
 
 [node name="creature_generator" type="Node3D" parent="."]
 script = ExtResource("2_tqbii")
-frequency = 1.8
-start_angle = 1.93
-multiplier = 5.01
+frequency = 2.025
+start_angle = 1.805
+multiplier = 5.105
+head_scene = ExtResource("3_y2bqx")
+body_scene = ExtResource("4_kj5mt")
 
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 0)
