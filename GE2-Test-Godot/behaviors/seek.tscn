@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://okvro62ssxp" path="res://Models/cobramk3_out/cobramk3.gltf" id="1"]
 [ext_resource type="Script" path="res://behaviors/MoveTarget.gd" id="2"]
-[ext_resource type="PackedScene" path="res://behaviors/player.tscn" id="2_gcac3"]
+[ext_resource type="PackedScene" uid="uid://ivslos3b7cmv" path="res://behaviors/player.tscn" id="2_gcac3"]
 [ext_resource type="Script" path="res://behaviors/OffsetPursue.gd" id="3"]
 [ext_resource type="Script" path="res://behaviors/root.gd" id="6"]
 [ext_resource type="Script" path="res://behaviors/Avoidance.gd" id="7"]
 [ext_resource type="PackedScene" uid="uid://dc24oh4o5erhi" path="res://behaviors/SceneSwitcher.tscn" id="10"]
-[ext_resource type="Material" path="res://behaviors/Tank Material.tres" id="11_a5ijt"]
+[ext_resource type="Material" uid="uid://b2raijlysriqd" path="res://behaviors/Tank Material.tres" id="11_a5ijt"]
 [ext_resource type="Script" path="res://behaviors/Boid.gd" id="12"]
-[ext_resource type="PackedScene" path="res://behaviors/jet_particles.tscn" id="12_75r8b"]
+[ext_resource type="PackedScene" uid="uid://4mtp0em00spx" path="res://behaviors/jet_particles.tscn" id="12_75r8b"]
 [ext_resource type="Script" path="res://behaviors/Seek.gd" id="15"]
 [ext_resource type="Script" path="res://behaviors/SpineAnimator.gd" id="16"]
 [ext_resource type="PackedScene" uid="uid://c7rubewuhrpnq" path="res://ui_layer.tscn" id="16_c0578"]
@@ -78,7 +78,7 @@ bonePaths = [NodePath("../boid"), NodePath("../body1"), NodePath("../body2"), No
 angular_damping = 15.0
 
 [node name="boid" type="CharacterBody3D" parent="Creature"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.5154)
+transform = Transform3D(0.99995, -0.00996567, 0, 0.00996567, 0.99995, 0, 0, 0, 1, 0, 0, 12.5154)
 script = ExtResource("12")
 max_force = 50
 banking = 0.2
